@@ -7,7 +7,8 @@ const bwipjs = require('bwip-js');
 
 const app = express();
 app.use(cors())
-const PORT = process.env.port || 3000;
+
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -84,7 +85,7 @@ var download = function(uri, filename, callback){
 
 
 
-app.listen(PORT, console.log(`port Listining on port ${PORT}`));
+app.listen(port, () => console.log(`port Listining on port ${port}`));
 
 
   
