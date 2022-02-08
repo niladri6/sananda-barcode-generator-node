@@ -1,16 +1,13 @@
-var JsBarcode = require('jsbarcode');
 const express = require('express');
 var cors = require('cors')
 
 const ejs = require("ejs");
 const path = require("path");
-const exp = require("constants");
-const http   = require('http');
 const bwipjs = require('bwip-js');
 
 const app = express();
 app.use(cors())
-const port = process.env.port || 3000;
+const PORT = process.env.port || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -87,7 +84,7 @@ var download = function(uri, filename, callback){
 
 
 
-app.listen(port, console.log('port Listining on port ', port));
+app.listen(PORT, console.log(`port Listining on port ${PORT}`));
 
 
   
